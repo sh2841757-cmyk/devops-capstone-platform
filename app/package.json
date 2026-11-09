@@ -1,0 +1,14 @@
+{
+  "name": "devops-capstone-app",
+  "version": "1.0.0",
+  "description": "Sample Node.js app for an end-to-end DevOps capstone",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "prom-client": "^15.1.3"
+  }
+}

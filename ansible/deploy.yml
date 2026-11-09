@@ -1,0 +1,22 @@
+---
+- name: Deploy DevOps capstone app with Docker
+  hosts: local
+  become: false
+  tasks:
+    - name: Build application image
+      community.docker.docker_image:
+        name: devops-capstone-app
+        tag: "1.0.0"
+        source: build
+        build:
+          path: "{{ playbook_dir }}/../app"
+        state: present
+
+    - name: Run application container
+      community.docker.docker_container:
+        name: devops-capstone-app
+        image: devops-capstone-app:1.0.0
+        state: started
+        restart_policy: unless-stopped
+        published_ports:
+          - "3000:3000"

@@ -1,6 +1,6 @@
 # Demo and evidence checklist
 
-Capture your own screenshots/output for each item:
+Capture genuine screenshots and command output for each item. Mark an item complete only after verification:
 - [ ] GitHub repository with README and source tree
 - [ ] Successful GitHub Actions test run
 - [ ] Successful Docker image build

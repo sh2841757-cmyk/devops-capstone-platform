@@ -1,36 +1,58 @@
 # Architecture
 
-```text
+## Project Overview
+
+This project demonstrates a DevOps workflow for a Node.js application.
+
+## Architecture Flow
+
 Developer
    |
    v
-GitHub repository
+GitHub Repository
    |
    v
-GitHub Actions / Jenkins
-   |-- install dependencies
-   |-- run automated tests
-   |-- build Docker image
-   v
-Container image
-   |--------------------|
-   v                    v
-Docker Compose       Kubernetes
+GitHub Actions
    |
-   +--> Node.js application (/health, /ready, /metrics)
-              |
-              v
-         Prometheus
-              |
-              v
-           Grafana
-```
+   v
+Automated Tests
+   |
+   v
+Docker Image
+   |
+   +------> Docker Compose
+   |
+   +------> Kubernetes
+   |
+   v
+Node.js Application
+   |
+   v
+Prometheus
+   |
+   v
+Grafana
 
-## Design decisions
-- The sample service is stateless and exposes health/readiness endpoints.
-- CI runs tests before building the container image.
-- Docker Compose is the low-cost local demonstration environment.
-- Kubernetes manifests demonstrate replicas, service discovery, probes, and resource limits.
-- Prometheus scrapes application metrics; Grafana visualizes them.
-- Jenkinsfile demonstrates an alternative CI pipeline.
-- Ansible demonstrates repeatable local deployment.
+## Main Components
+
+- GitHub: Source code management.
+- GitHub Actions: CI/CD automation.
+- Docker: Application containerization.
+- Kubernetes: Container orchestration.
+- Prometheus: Metrics collection.
+- Grafana: Metrics visualization.
+- Jenkins: Alternative CI pipeline.
+- Ansible: Configuration automation.
+- Terraform: Infrastructure as Code.
+
+## Design Decisions
+
+- The application is designed to be stateless.
+- Automated tests run before Docker image build.
+- Docker Compose provides a local demonstration environment.
+- Kubernetes manifests demonstrate deployment concepts.
+- Prometheus and Grafana provide monitoring.
+
+## Limitations
+
+This is a learning-focused capstone. Production deployment and execution of all automation tools must be verified separately.

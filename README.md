@@ -11,7 +11,7 @@ automation, orchestration, and monitoring.
 
 ## Quick start (local)
 ```bash
-git clone <YOUR-GITHUB-REPOSITORY-URL>
+git clone https://github.com/sh2841757-cmyk/devops-capstone-platform
 cd devops-capstone-platform
 docker compose up --build -d
 ```

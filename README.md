@@ -1,6 +1,6 @@
 # End-to-End DevOps Automation Platform
 
-A learning-focused DevOps capstone demonstrating CI, containerization, deployment
+An end-to-end DevOps capstone demonstrating CI, containerization, deployment
 automation, orchestration, and monitoring.
 
 ## Requirements
